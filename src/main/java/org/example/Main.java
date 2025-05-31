@@ -6,9 +6,9 @@ import org.example.Decorator.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        // Запускаем HTTP сервер на порту 9090
+        // Запускаем HTTP сервер на порту 9000
         HTTPServer server = new HTTPServer.Builder()
-                .withPort(9090)
+                .withPort(9000)
                 .withRegistry(MetricsRegistry.registry.getPrometheusRegistry())
                 .build();
 
@@ -22,7 +22,7 @@ public class Main {
         Thread thread = new Thread(new MessageProcessor(message, 2000));
         thread.start();
 
-        Thread.sleep(10000);
-        thread.interrupt();
+//        Thread.sleep(100000);
+//        thread.interrupt();
     }
 }

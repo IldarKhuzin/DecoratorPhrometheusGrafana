@@ -4,4 +4,4 @@ global:
 scrape_configs:
   - job_name: 'java-decorator'
     static_configs:
-      - targets: ['host.docker.internal:9090']  # если Java-приложение запущено локально
+      - targets: ['172.17.0.1:9000']  # если Java-приложение запущено локально
