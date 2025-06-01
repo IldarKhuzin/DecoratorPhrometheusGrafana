@@ -17,7 +17,7 @@ public class Main {
 
         Message message = new ExString(
                 new UpString(
-                        new SimpleString("Привет, Ильдар")));
+                        new SimpleString("Hello, World")));
 
         Thread thread = new Thread(new MessageProcessor(message, 2000));
         thread.start();
